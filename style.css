@@ -1,3 +1,62 @@
-h1 {
-    color: red;
+.titulo {
+    font-style: oblique;
+    text-decoration: gray;
+    text-align: center;
+    text-shadow: 3px 2px lightgray;
+    text-decoration-line: underline;
+    
+}
+.subtitulo{
+    width: 50%;
+    text-decoration: darkgray;
+    text-align: center;
+    text-shadow: 2px 1px gray;
+    text-decoration-line: underline;
+}
+
+.textoIzquierda{
+    width: 50%;
+}
+
+.textoDerecha{
+    position: relative;
+    left: 50%;
+    width: 50%;
+}
+
+.barraflotante{
+    position: sticky;
+
+    width: 100%;
+    height: 55px;
+    top: 0px;
+    text-align: center;
+    background-color: darkturquoise;
+    border: 3px solid darkgoldenrod;
+}
+.barraflotante .internosuperior{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+}
+
+.barraflotante .internoinferior{
+    position: absolute;
+    padding: 0 10px;
+    top: 25px;
+}
+
+.barraflotante .internoinferior .BotonDeshabilitado{
+    background-color: darkgray;
+    color: gray;
+}
+
+.barraflotante .internoinferior .BotonHabilitado{
+    background-color: beige;
+    color: black;
+}
+
+.barraflotante .internoinferior .BotonHabilitado:hover{
+    background-color: darksalmon;
+    color: black;
 }
