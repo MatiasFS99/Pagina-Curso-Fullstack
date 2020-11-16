@@ -26,13 +26,25 @@
 
 .barraflotante{
     position: sticky;
-
-    width: 100%;
-    height: 55px;
+    background-image:url('fondobarra.png');
+    width: 98%;
+    height: 75px;
     top: 0px;
     text-align: center;
     background-color: darkturquoise;
     border: 3px solid darkgoldenrod;
+    border-style: solid hidden solid hidden;
+    border-radius: 35px;
+}
+
+.barraflotante .titulodepagina{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    font-style: oblique;
+    text-decoration: red;
+    text-align: center;
+    text-shadow: 3px 2px lightgray;
+    text-decoration-line: underline;
 }
 .barraflotante .internosuperior{
     position: absolute;
@@ -42,8 +54,11 @@
 
 .barraflotante .internoinferior{
     position: absolute;
+    text-align: center;
+    width: 98%;
+    margin: auto;
     padding: 0 10px;
-    top: 25px;
+    top: 33px;
 }
 
 .barraflotante .internoinferior .BotonDeshabilitado{
@@ -52,11 +67,13 @@
 }
 
 .barraflotante .internoinferior .BotonHabilitado{
+    text-align: center;
     background-color: beige;
     color: black;
 }
 
 .barraflotante .internoinferior .BotonHabilitado:hover{
+    text-align: center;
     background-color: darksalmon;
     color: black;
 }
