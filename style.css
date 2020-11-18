@@ -1,3 +1,33 @@
+body{
+    background-image:url('fondo.png');
+}
+
+.TablaComparativa{
+    width: 98%;
+    
+}
+
+.TablaComparativa .Tablas{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-image:url('imagenes/hojas.jpg');
+    background-size: 100% 100%;
+}
+
+.TablaComparativa .Tablas th{
+    text-align: center;
+    width: 33%;
+    border: 1px solid black;
+}
+
+.TablaComparativa .Tablas td{
+    text-align: left;
+    border: 1px solid black;
+}
+
 .titulo {
     font-style: oblique;
     text-decoration: gray;
@@ -24,56 +54,145 @@
     width: 50%;
 }
 
-.barraflotante{
-    position: sticky;
-    background-image:url('fondobarra.png');
-    width: 98%;
-    height: 75px;
-    top: 0px;
+.Final{
+    position: relative;
     text-align: center;
-    background-color: darkturquoise;
-    border: 3px solid darkgoldenrod;
-    border-style: solid hidden solid hidden;
-    border-radius: 35px;
+    background-color: lightsteelblue;
+    width: 99%;
+    bottom: 0;
 }
 
-.barraflotante .titulodepagina{
-    font-family: "Times New Roman", Times, serif;
-    font-size: 30px;
-    font-style: oblique;
-    text-decoration: red;
-    text-align: center;
-    text-shadow: 3px 2px lightgray;
-    text-decoration-line: underline;
-}
-.barraflotante .internosuperior{
-    position: absolute;
-    text-align: center;
-    top: 0px;
+@media (hover: none) and (pointer: coarse) { /* Esto es para que reconozca si esta en una pantalla tactil para deshabilitar los hover*/
+
+    .barraflotante{
+        position: sticky;
+        background-image:url('fondobarra.png');
+        width: 98%;
+        height: 75px;
+        top: 0px;
+        text-align: center;
+        background-color: darkturquoise;
+        border: 3px solid darkgoldenrod;
+        border-style: solid hidden hidden hidden;
+        border-radius: 35px;
+    }
+
+    .barraflotante .titulodepagina{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        font-style: oblique;
+        text-decoration: red;
+        text-align: center;
+        text-shadow: 3px 2px lightgray;
+        text-decoration-line: underline;
+    }
+    .barraflotante .internosuperior{
+        position: absolute;
+        text-align: center;
+        top: 0px;
+    }
+
+    .barraflotante .internoinferior{
+        position: absolute;
+        text-align: center;
+        width: 98%;
+        margin: auto;
+        padding: 0 10px;
+        top: 33px;
+    }
+
+    .barraflotante .internoinferior .BotonDeshabilitado{
+        background-color: darkgray;
+        color: gray;
+    }
+
+    .barraflotante .internoinferior .BotonHabilitado{
+        text-align: center;
+        background-color: beige;
+        color: black;
+    }
+
+    .barraflotante .internoinferior .BotonHabilitado:hover{
+        text-align: center;
+        background-color: darksalmon;
+        color: black;
+    }
+
 }
 
-.barraflotante .internoinferior{
-    position: absolute;
-    text-align: center;
-    width: 98%;
-    margin: auto;
-    padding: 0 10px;
-    top: 33px;
-}
+@media (hover: hover) and (pointer: fine){  /* esto es para que funcione con mouse habilitando los hover */
+    .barraflotante{
+        position: sticky;
+        background-image:url('fondobarra.png');
+        width: 98%;
+        height: 60px;
+        top: 0px;
+        text-align: center;
+        background-color: darkturquoise;
+        border: 3px solid darkgoldenrod;
+        border-style: solid hidden hidden hidden;
+        border-radius: 35px;
+        transition: 0.5s;
+        transition-delay: 0.2s;
+        background-size: 100% 60px;
+    }
 
-.barraflotante .internoinferior .BotonDeshabilitado{
-    background-color: darkgray;
-    color: gray;
-}
+    .barraflotante:hover{
+        height: 75px;
+        background-size: 100% 75px;
+        transition: 0.5s;
+    }
 
-.barraflotante .internoinferior .BotonHabilitado{
-    text-align: center;
-    background-color: beige;
-    color: black;
-}
+    .barraflotante .titulodepagina{
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        font-style: oblique;
+        text-decoration: red;
+        text-align: center;
+        text-shadow: 3px 2px lightgray;
+        text-decoration-line: underline;
+    }
+    .barraflotante .internosuperior{
+        position: absolute;
+        text-align: center;
+        top: 0px;
+    }
 
-.barraflotante .internoinferior .BotonHabilitado:hover{
-    text-align: center;
-    background-color: darksalmon;
-    color: black;
+    .barraflotante .internoinferior{
+        position: absolute;
+        text-align: center;
+        width: 98%;
+        margin: auto;
+        padding: 0 10px;
+        top: 33px;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .barraflotante:hover .internoinferior{
+        opacity: 1;
+        transition-duration: 0.3s;
+        transition-delay: 0.2s;
+    }
+    
+    .barraflotante .internoinferior .BotonDeshabilitado{
+        background-color: darkgray;
+        color: gray;
+    }
+
+    .barraflotante .internoinferior .BotonHabilitado{
+        text-align: center;
+        background-color: beige;
+        color: black;
+        transition: 0.2s
+    }
+
+    .barraflotante .internoinferior .BotonHabilitado:hover{
+        text-align: center;
+        background-color: darksalmon;
+        color: black;
+        border-radius: 15px;
+        padding: 3px;
+        transition: 0.2s;
+    }
 }
