@@ -90,6 +90,7 @@ body{
         position: absolute;
         text-align: center;
         top: 0px;
+        opacity: 0;
     }
 
     .barraflotante .internoinferior{
