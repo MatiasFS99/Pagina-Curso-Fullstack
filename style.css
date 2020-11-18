@@ -112,12 +112,6 @@ body{
         color: black;
     }
 
-    .barraflotante .internoinferior .BotonHabilitado:hover{
-        text-align: center;
-        background-color: darksalmon;
-        color: black;
-    }
-
 }
 
 @media (hover: hover) and (pointer: fine){  /* esto es para que funcione con mouse habilitando los hover */
@@ -125,7 +119,7 @@ body{
         position: sticky;
         background-image:url('fondobarra.png');
         width: 98%;
-        height: 60px;
+        height: 62px;
         top: 0px;
         text-align: center;
         background-color: darkturquoise;
@@ -154,8 +148,32 @@ body{
     }
     .barraflotante .internosuperior{
         position: absolute;
+        size: 2px;
         text-align: center;
-        top: 0px;
+        color: rgb(255, 141, 47);
+        text-decoration: steelblue;
+        width: 100%;
+        margin: auto;
+        text-decoration-line: underline;
+        text-shadow: 1px 1px black;
+        bottom: 0px;
+        opacity: 1;
+        transition: 0.1s;
+    }
+
+    .barraflotante:hover .internosuperior{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        bottom: 0px;
+        opacity: 0;
+        transition: 0.1s;
+    }
+
+    .barraflotante .internosuperior .ayuda{
+        background-color: steelblue;
+        border-radius: 10px;
     }
 
     .barraflotante .internoinferior{
@@ -195,4 +213,14 @@ body{
         padding: 3px;
         transition: 0.2s;
     }
+
+    .barraflotante .internoinferior .BotonHabilitado:active{
+        text-align: center;
+        background-color: royalblue;
+        color: black;
+        border-radius: 15px;
+        padding: 3px;
+        transition: 0.2s;
+    }
+
 }
